@@ -1,6 +1,6 @@
 module "vpc" {
-    source = "../terraform-aws-vpc"
-    project     = "roboshop"
-    environment = "dev"
-    is_peering_required = true
+    #source = "../../terraform-aws-vpc"
+    source = "git::https://github.com/VONTIPULIPUJYAGANESHKARTHIK/terraform-aws-vpc.git?ref=main"
+    project = var.project
+    environment = var.environment
 }
